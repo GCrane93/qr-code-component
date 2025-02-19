@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | QR code component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --colour-slate-900: #1f314f;
+        --colour-slate-500: #68778d;
+        --colour-slate-300: #d5e1ef;
+        --colour-white: #fff;
+        --text-p1-size: 22px;
+        --text-p1-line-height: 120%;
+        --text-p1-letter-spacing: 0;
+        --text-p2-size: 15px;
+        --text-p2-line-height: 140%;
+        --text-p2-letter-spacing: 0.2px;
+        --spacer-500: 40px;
+        --spacer-300: 24px;
+        --spacer-200: 16px;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Outfit", serif;
+        background: var(--colour-slate-300);
+      }
+
+      .qr-card {
+        background: var(--colour-white);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacer-300);
+        padding: var(--spacer-200);
+        max-width: 288px;
+        text-align: center;
+        border-radius: 20px;
+      }
+
+      .qr-card__img {
+        width: 100%;
+        max-width: 288px;
+        height: 288px;
+        border-radius: 10px;
+      }
+
+      .qr-card__img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .qr-card__title {
+        font-size: var(--text-p1-size);
+        line-height: var(--text-p1-line-height);
+        letter-spacing: var(--text-p1-letter-spacing);
+        color: var(--colour-slate-900);
+        text-wrap: balance;
+      }
+
+      .qr-card__text {
+        font-size: var(--text-p2-size);
+        line-height: var(--text-p2-line-height);
+        letter-spacing: var(--text-p2-letter-spacing);
+        color: var(--colour-slate-500);
+        margin: 0;
+        text-wrap: pretty;
+      }
+
+      .attribution {
+        position: absolute;
+        bottom: var(--spacer-200);
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="qr-card">
+      <div class="qr-card__img">
+        <img src="images/image-qr-code.png" alt="QR Code" />
+      </div>
+      <div class="qr-card__title">Improve your front-end skills by building projects</div>
+      <p class="qr-card__text">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="https://www.frontendmentor.io/profile/GCrane93">GCrane93</a>.
+    </div>
+  </body>
+</html>
